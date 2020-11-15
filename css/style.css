@@ -260,6 +260,19 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 2 /span 2;
 }
 
+/* Article */
+#article .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 1rem;
+}
+
+#article .meta .category {
+    margin-top: 0.4rem;
+}
+
 /* Footer */
 #main-footer {
     background: var(--dark-color);
