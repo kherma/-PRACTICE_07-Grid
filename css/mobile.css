@@ -1,0 +1,88 @@
+#main-nav .socials {
+    display: none;
+}
+
+#main-nav .container {
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home-articles .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child  {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+
+@media(max-width: 600px) {
+    /* Home - Showcase */
+    #showcase .showcase-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #showcase .showcase-container p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    /* Home - Articles */
+    #home-articles .articles-container {
+        grid-template-columns: 1fr
+    }
+
+    /* Home - Footer */
+    #main-footer .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    #main-footer .footer-container > *:last-child {
+        grid-column: 1;
+        margin-bottom: 1rem;
+    }
+
+    #main-footer .footer-container > *{
+        margin-bottom: 3rem;
+    }
+
+    /* About / Article - Article & Club window relation */
+    .page-container {
+        grid-template-columns: 1fr;
+        margin: 2rem 0;
+        grid-gap: 1.5rem;
+    }
+    
+    .page-container > *:first-child {
+        grid-row: 1 /span 3;
+    }
+    
+    .page-container p {
+        margin: 1rem 0;
+    }
+
+    /* Article - Author */
+    #article .meta {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #article .meta small{
+        font-size: 0.6rem;
+    }
+
+    #article .meta .category {
+        margin-top: 0.4rem;
+    }
+    
+    .l-header {
+        font-size: 2rem;
+    }
+}
