@@ -9,7 +9,7 @@
 
 .category {
     --sports-color: #f99500;
-    --entertainment-color: #a66bd3;
+    --ent-color: #a66bd3;
     --tech-color: #009cff;
 }
 
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category-sports { background: var(--sports-color);}
-.category-entertainment { background: var(--entertainment-color);}
+.category-ent { background: var(--ent-color);}
 .category-tech { background: var(--tech-color);}
 
 .btn {
@@ -88,6 +88,35 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     text-align: center;
 }
+
+.card {
+    background: #fff;
+    padding: 1rem;
+}
+
+.bg-dark {background: var(--dark-color); color: var(--light-color);}
+.bg-primary {background: var(--primary-color); color: var(--light-color);}
+.bg-secondary {background: var(--secondary-color); color: var(--light-color);}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+    color: #fff;
+}
+
+.py-1 {padding: 1rem;}
+.py-2 {padding: 2rem;}
+.py-3 {padding: 3rem;}
+
 /* Navigation */
 #main-nav {
     background: #fff;
@@ -172,3 +201,24 @@ h1, h2, h3, h4, h5, h6 {
 #showcase .showcase-content p {
     margin-bottom: 1rem;
 }
+
+/* Main Articles */
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child, 
+#home-articles .articles-container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-column: 1 /span 2;
+    align-items: center;
+}
+
+#home-articles .articles-container > *:last-child {
+    grid-column: 2 /span 2;
+}
+
